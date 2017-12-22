@@ -1,0 +1,31 @@
+.forward {
+    .row {
+        position: relative;
+    }
+    padding-top: 5rem;
+    background-color: $white;
+    &:before {
+        content: '';
+        position: absolute;
+        left: -30rem;
+        right: -30rem;
+        top: -19rem;
+        background: $white;
+        padding-top: 30rem;
+        border-top-left-radius: 200%;
+        border-top-right-radius: 200%;
+        z-index: 3;
+    }
+}
+
+@media only screen and (max-width:$screen-sm-max) {
+    .forward {
+        padding-top: 0rem;
+        &:before {
+            display: none;
+        }
+        .row {
+            text-align: center;
+        }
+    }
+}

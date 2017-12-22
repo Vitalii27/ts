@@ -1,0 +1,197 @@
+.typography {
+    font-size: 1.6rem;
+    font-weight: 400;
+    //color: $smoke-gray;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        //color: $light-purple;
+        font-family: $main-font;
+        font-weight: 400;
+        line-height: 1.3;
+        margin-bottom: .8em;
+    }
+    h1,
+    .h1 {
+        font-size: 4.5rem;
+    }
+    h2,
+    .h2 {
+        font-size: 3.2rem;
+        color: #373a44;
+    }
+    h3,
+    .h3 {
+        font-size: 3rem;
+    }
+    h4,
+    .h4 {
+        font-size: 2.4rem;
+    }
+    h5,
+    .h5 {
+        font-size: 2rem;
+    }
+    h6,
+    .h6 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: #333333;
+        text-transform: uppercase;
+    }
+    p,
+    .p {
+        font-family: $main-font;
+        font-weight: 400;
+        color: #999;
+        margin-top: 2rem;
+        line-height: 2.1rem;
+    }
+    strong {
+        font-weight: 700;
+    }
+    small {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    a:not([class]) {
+        //color: $pink;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline
+        }
+        &:active {
+            color: #222
+        }
+    }
+    ul,
+    ol {
+        padding: 0;
+        list-style-position: outside;
+        li {}
+    }
+    ul li {
+        list-style: none;
+    }
+    ol li {
+        list-style: decimal;
+        font-weight: 400;
+    }
+    blockquote {}
+    table {
+        table-layout: fixed;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        min-width: 100%;
+        text-align: center;
+        border-radius: 0;
+        border-collapse: collapse;
+        border: 1px solid $silver-grey;
+        padding: 0;
+        tbody {
+            position: relative;
+            margin: 0 auto;
+        }
+        caption {
+            font-size: 1.5em;
+            margin: .5em 0 .75em;
+        }
+        tr,
+        th,
+        td {
+            margin: 0;
+            padding: 1rem 1.3rem;
+            border: 1px solid $silver-grey;
+        }
+        th {
+            font-weight: bold;
+            text-align: center;
+            background: #eee;
+            white-space: nowrap;
+        }
+    }
+    img {
+        display: block;
+        position: relative;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.green-circle-blur {
+    background-color: $green;
+    border-radius: 50%;
+    position: absolute;
+    left: 1722px;
+    top: 319px;
+    width: 17rem;
+    height: 17rem;
+    z-index: 455;
+    filter: blur(5px);
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+    .typography {
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+    }
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+    .typography {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            text-align: center;
+        }
+        h1,
+        .h1 {
+            font-size: 3.8rem;
+        }
+        h2,
+        .h2 {
+            font-size: 3rem;
+        }
+        h3,
+        .h3 {
+            font-size: 2.4rem;
+        }
+        h4,
+        .h4 {
+            font-size: 2rem;
+        }
+        h5,
+        .h5 {
+            font-size: 2rem;
+        }
+        h6,
+        .h6 {
+            font-size: 1.8rem;
+        }
+    }
+}

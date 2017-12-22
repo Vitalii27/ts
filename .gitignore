@@ -1,0 +1,6 @@
+.idea
+node_modules
+tmp
+public
+/only_for_dev/*
+!/only_for_dev/index.html

@@ -1,0 +1,52 @@
+/* common.scss */
+
+
+/* selection */
+
+*::selection {
+    color: $dark-grey;
+    background: rgba($light-grey, 0.3);
+}
+
+:root {
+    font-size: $html-font-size;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    min-width: $content-min-width;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    color: $medium-grey;
+    background: $white;
+    font-family: $default-fonts;
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    position: relative;
+    // z-index: 7;
+}
+
+
+/* common.scss end */

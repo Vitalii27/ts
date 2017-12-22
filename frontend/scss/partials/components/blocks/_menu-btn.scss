@@ -1,0 +1,140 @@
+$menu-btn-color: $black;
+$menu-btn-color--active: $black;
+.menu-btn {
+    font-size: 5rem;
+    display: none;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    right: 3rem;
+    top: 3.5rem;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    z-index: 101;
+    &:focus {}
+}
+
+.menu-btn_middle,
+.menu-btn_bottom,
+.menu-btn_top {
+    background: $menu-btn-color;
+    will-change: transform;
+}
+
+.menu-btn span {
+    display: block;
+}
+
+.menu-btn_inner {
+    width: .7em;
+    height: .7em;
+    position: absolute;
+    top: .16em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 200;
+    &.is-shown-menu {}
+}
+
+.menu-btn_top {
+    display: block;
+    position: relative;
+    top: 0;
+    width: .7em;
+    height: .08em;
+    border: none;
+    border-radius: .08em;
+    transition: transform 0.5s, top 0.2s;
+}
+
+.menu-btn_middle {
+    display: block;
+    position: relative;
+    width: .7em;
+    height: .08em;
+    top: .14em;
+    border: none;
+    border-radius: .08em;
+    transition: transform 0.5s, top 0.2s;
+}
+
+.menu-btn_bottom {
+    display: block;
+    position: relative;
+    width: .7em;
+    height: .08em;
+    top: .28em;
+    border: none;
+    border-radius: .08em;
+    transition: transform 0.5s;
+}
+
+.is-swipe-menu-shown .menu-btn_inner {
+    .menu-btn_middle,
+    .menu-btn_bottom,
+    .menu-btn_top {
+        background: $menu-btn-color--active;
+    }
+    .menu-btn_top {
+        top: .18em;
+        transform: rotate(-45deg);
+    }
+    .menu-btn_middle {
+        top: .1em;
+        transform: rotate(45deg);
+    }
+    .menu-btn_bottom {
+        opacity: 0;
+        top: 0;
+        transform: rotate(180deg);
+    }
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+    .menu-btn {
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+    .menu-btn {
+        width: 5.8rem;
+        height: 5.8rem;
+        top: 1.5rem;
+        right: 1rem;
+    }
+    .menu-btn_inner {
+        width: 3.1rem;
+        height: 2.7rem;
+    }
+    .menu-btn_top {
+        width: 2.7rem;
+        height: .2rem;
+    }
+    .menu-btn_middle {
+        width: 2.7rem;
+        top: 0.7rem;
+        height: .2rem;
+    }
+    .menu-btn_bottom {
+        width: 2.7rem;
+        height: .2rem;
+        top: 1.4rem;
+    }
+    .is-swipe-menu-shown .menu-btn_inner {
+        .menu-btn_top {
+            top: 1rem;
+        }
+        .menu-btn_middle {
+            top: 0.8rem;
+        }
+    }
+}

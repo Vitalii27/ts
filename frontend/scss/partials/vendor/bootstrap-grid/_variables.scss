@@ -1,0 +1,83 @@
+// Variables
+// --------------------------------------------------
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+$screen-xs: 30em !default; // 480px
+// Small screen / tablet
+$screen-sm: 48em !default; // 768px
+// Medium screen / desktop
+$screen-md: 62em !default; // 992px
+// Large screen / wide desktop
+$screen-lg: 75em !default; // 1200px
+
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+//$screen-xs:                  32.25em !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-xs-max` as of v3.0.1
+//$screen-xs-max:                  48em !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-sm-max` as of v3.0.1
+//$screen-sm-max:                  $screen-sm-max !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+//$screen-lg:                  75em !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 0.0625) !default;
+$screen-sm-max:              ($screen-md-min - 0.0625) !default;
+$screen-md-max:              ($screen-lg-min - 0.0625) !default;
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         3rem !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 0.0625) !default;
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             (45rem + $grid-gutter-width) !default;
+//** For `$screen-xs-max-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            (58.75rem + $grid-gutter-width) !default;
+//** For `$screen-sm-max-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      (71.25rem + $grid-gutter-width) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;

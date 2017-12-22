@@ -1,0 +1,94 @@
+/* VARIABLES */
+
+@import "partials/common/variables";
+@import "partials/common/fonts";
+
+/* VARIABLES END */
+
+
+/* -------------------- */
+
+
+/* VENDOR */
+
+@import "partials/vendor/normalize";
+@import "partials/vendor/clearfix";
+@import "partials/vendor/bootstrap-grid/bootstrap-grid";
+@import "partials/vendor/bootstrap-grid/responsive-utilities";
+
+/* VENDOR END */
+
+
+/* -------------------- */
+
+
+/* COMMON */
+
+@import "partials/common/best-practices";
+@import "partials/common/common";
+@import "partials/common/service-classes";
+@import "partials/common/typography";
+
+/* COMMON END */
+
+
+/* -------------------- */
+
+
+/* LAYOUT */
+
+@import "partials/layout/layout";
+
+/* LAYOUT END */
+
+
+/* -------------------- */
+
+
+/* BLOCKS */
+
+@import "partials/components/blocks/menu-btn";
+@import "partials/components/blocks/swipe-menu";
+@import "partials/components/blocks/way";
+@import "partials/components/blocks/forward";
+@import "partials/components/blocks/content-desc";
+@import "partials/components/blocks/advantages";
+@import "partials/components/blocks/title";
+@import "partials/components/blocks/team";
+@import "partials/components/blocks/order-popup";
+@import "partials/components/blocks/popup";
+@import "partials/components/blocks/offer";
+@import "partials/components/blocks/jobs";
+@import "partials/components/blocks/advantages-popup";
+@import "partials/components/blocks/roles";
+@import "partials/components/blocks/banner";
+@import "partials/components/blocks/about";
+@import "partials/components/blocks/stores";
+@import "partials/components/blocks/circle";
+@import "partials/components/blocks/alert";
+@import "partials/components/blocks/404";
+
+/* BLOCKS END*/
+
+
+/* -------------------- */
+
+
+/* GENERAL */
+
+@import "partials/components/header";
+@import "partials/components/footer";
+
+/* GENERAL END */
+
+
+/* -------------------- */
+
+
+/* PAGES */
+
+
+/* PAGES END */
+
+
+/* -------------------- */

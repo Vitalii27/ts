@@ -1,0 +1,88 @@
+.stores {
+    .green-circle {
+        position: absolute;
+        top: 39%;
+        right: 23%;
+    }
+    .big-title {
+        font-size: 18rem;
+    }
+    &_map {
+        position: relative;
+        margin-top: 2rem;
+        z-index: 6;
+        @for $i from 1 through length($animationDelay) {
+            div:nth-child(#{$i}) {
+                animation-delay: nth($animationDelay, $i);
+            }
+        }
+    }
+    &_marker {
+        position: absolute;
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    &_city {
+        color: #666666;
+        font-size: 0.7rem;
+        position: absolute;
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    &_quantity {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white;
+        font-size: 1.16rem;
+    }
+    &_img {
+        max-width: none;
+    }
+    &_desc {
+        position: absolute;
+        top: 25rem;
+        max-width: 41rem;
+        color: #333333;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    &_text {
+        display: inline-block;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        span {
+            padding-left: .5rem;
+            vertical-align: bottom;
+        }
+    }
+    &_info {
+        margin-left: 2.5rem;
+        padding-top: 3rem;
+    }
+}
+
+@media only screen and (max-width:$screen-lg-max) {
+    .stores {
+        .big-title {
+            font-size: 12rem;
+        }
+    }
+}
+
+@media only screen and (max-width:$screen-sm-max) {
+    .stores {
+        padding-top: 4rem;
+        display: none;
+        .big-title {
+            font-size: 7rem;
+        }
+        &_map {
+            display: none;
+        }
+    }
+}

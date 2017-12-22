@@ -1,0 +1,65 @@
+.circle {
+    width: 81rem;
+    height: 81rem;
+    border-radius: 50%;
+    border-color: $white;
+    box-shadow: 0px 18px 54px 0px rgba(0, 0, 0, 0.07);
+    margin: 0 auto;
+    position: absolute;
+    top: -30rem;
+    left: 14.2rem;
+}
+
+.circle-blur {
+    background: $green;
+    border-radius: 50%;
+    filter: blur(6px);
+    position: absolute;
+    z-index: 5;
+    &--one {
+        height: 21rem;
+        width: 21rem;
+        right: -3%;
+        top: 50%;
+    }
+    &--two {
+        height: 43.5rem;
+        width: 43.5rem;
+        left: -10%;
+        bottom: 23%;
+    }
+    &--three {
+        height: 21rem;
+        width: 21rem;
+        right: -4%;
+        bottom: 5%;
+    }
+}
+
+.green-circle {
+    display: inline-block;
+    background-color: $green;
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 50%;
+    margin-left: 5rem;
+    z-index: 2;
+}
+
+@media only screen and (max-width:$screen-lg-max) {
+    .circle-blur {
+        // z-index: 6;
+        &--two {
+            height: 30.5rem;
+            width: 30.5rem;
+        }
+    }
+}
+
+@media only screen and (max-width:$screen-md-max) {
+    .circle,
+    .circle-blur,
+    .green-circle {
+        display: none;
+    }
+}

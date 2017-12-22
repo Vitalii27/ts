@@ -1,0 +1,49 @@
+/* service-classes.scss */
+
+/*==========  Mobile First Method  ==========*/
+
+.center-xs {
+	text-align: center;
+}
+.left-xs {
+	text-align: left;
+}
+.right-xs {
+	text-align: right;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+	.center-sm {
+		text-align: center;
+	}
+	.left-sm {
+		text-align: left;
+	}
+	.right-sm {
+		text-align: right;
+	}
+} // $screen-xs-max
+
+@media only screen and (min-width: $screen-md-min) {
+	.center-md {
+		text-align: center;
+	}
+	.left-md {
+		text-align: left;
+	}
+	.right-md {
+		text-align: right;
+	}
+} // $screen-sm-max
+
+@media only screen and (min-width: $screen-lg-min) {
+	.center-lg {
+		text-align: center;
+	}
+	.left-lg {
+		text-align: left;
+	}
+	.right-lg {
+		text-align: right;
+	}
+} // $screen-lg

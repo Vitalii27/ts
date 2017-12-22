@@ -1,0 +1,27 @@
+<div id="order" class="order mfp-hide" role="dialog">
+    <div class="order_title-block">
+        <div class="team_offer-link"></div>
+    </div>
+    <h2>Оставить<br>резюме</h2>
+    <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+
+    <form action="/" method="GET" id="order-form" name="conclusion" class="form-order js-validate">
+        <div class="order_content">
+            <div class="form-order_container">
+                <div class="form-order_personal">
+                    <input class="form-order_input" autofocus required type="text" name="name" placeholder="Имя">
+                    <input class="form-order_input" required type="tel" name="phone" placeholder="Номер телефона">
+                    <input class="form-order_input" required type="email" name="email" placeholder="Ваш E-mail">
+                </div>
+                <div class="form-order_upload">
+                    <label for="upload" class="form-order_label"><span>Прикрепить резюме</span></label>
+                    <input type="file" id="upload" name="file" required class="form-order_file" data-multiple-caption="{count} files selected" multiple>
+                </div>
+            </div>
+            <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </p>
+        </div>
+        <div class="button-block">
+            <button type="submit" class="order_button">Отправить</button>
+        </div>
+    </form>
+</div>

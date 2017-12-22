@@ -1,0 +1,192 @@
+$swipe-menu-width:560px;
+$swipe-menu-z-index: 2;
+$swipe-menu-transition-in: transform .5s ease-out;
+$swipe-menu-transition-out: transform .2s ease-out;
+body.is-swipe-menu-shown {
+    .toggle-menu {
+        visibility: visible;
+    }
+    .section {
+        visibility: visible;
+    }
+    .swipe-menu {
+        transition: $swipe-menu-transition-in;
+        transform: translateX(0);
+        box-shadow: 0 -2px 5px 2px rgba(0, 0, 0, 0.4);
+    }
+    .header,
+    .footer-bg,
+    .main-content,
+    .footer {
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba($black, .7);
+            z-index: 5;
+        }
+    }
+}
+
+.menu-btn {
+    z-index: $swipe-menu-z-index + 4;
+}
+
+.swipe-menu {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    z-index: 6;
+    margin-top: 1.3rem;
+}
+
+.swipe-menu_arrow {
+    padding-left: 2rem;
+}
+
+.swipe-menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >li {
+        display: block;
+        margin-left: 0.4rem;
+        margin-right: 0.6rem;
+        white-space: nowrap;
+        &:last-child {
+            margin-left: 4.5rem;
+            a {
+                background-color: $green;
+                padding-left: 5rem;
+                padding-right: 5rem;
+                border-radius: 30rem;
+                color: #fff;
+                box-shadow: 0px 4px 7px 0px rgba(0, 0, 2, 0.21);
+                &:hover {
+                    background-color: $green;
+                }
+                &:active {
+                    background-color: #8caf0a;
+                }
+            }
+        }
+        a {
+            display: block;
+            font-family: $main-font;
+            animation-delay: all .25s;
+            font-weight: 400;
+            text-transform: uppercase;
+            transition: all .2s;
+            padding: 1rem 1.3rem;
+            color: #989898;
+            &:hover {
+                color: #fff;
+                background: $light-grey;
+                border-radius: 30rem;
+                box-shadow: 0px 16px 13px 0px rgba(0, 0, 2, 0.09);
+                text-shadow: 1px 0 0 #fff, 1px 0 0 #fff;
+            }
+            &:active {
+                background-color: #bcbaba;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $screen-md-max) {
+    .swipe-menu__list {
+        >li {
+            margin-left: 0.1rem;
+            margin-right: 0.2rem;
+            &:last-child {
+                margin-left: .5rem;
+            }
+            a {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+    .swipe-menu {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: $swipe-menu-width;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX($swipe-menu-width);
+        transition: $swipe-menu-transition-out;
+        background: #fff;
+        margin-top: 0rem;
+        z-index: 6;
+        &_language {
+            font-size: 23px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        &_arrow {
+            display: none;
+        }
+        &_list {
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-67%)
+        }
+        .swipe-menu_language {
+            padding-left: 0;
+        }
+    }
+    .swipe-menu__list {
+        display: block;
+        margin: 0 auto;
+        li:first-child {
+            margin-top: 110px;
+        }
+        >li {
+            margin-bottom: 45px;
+            &:last-child {
+                margin-left: 0;
+                a {
+                    background-color: transparent;
+                    padding-left: 0rem;
+                    padding-right: 0rem;
+                    border-radius: 0rem;
+                    color: #989898;
+                    box-shadow: none;
+                    &:hover {
+                        background-color: transparent;
+                        box-shadow: none;
+                    }
+                }
+            }
+            a {
+                font-size: 23px;
+                &:hover {
+                    color: $green;
+                    background: transparent;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $screen-xxs) {
+    .swipe-menu__list {
+        >li {
+            a {
+                font-size: 18px;
+            }
+        }
+    }
+}

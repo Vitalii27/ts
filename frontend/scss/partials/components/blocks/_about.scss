@@ -1,0 +1,67 @@
+.welcome-wrapper {
+    position: relative;
+}
+
+.about {
+    padding-top: 3rem;
+    padding-bottom: 15rem;
+    background: $white;
+    &:before {
+        content: '';
+        position: absolute;
+        left: -30rem;
+        right: -30rem;
+        top: -19rem;
+        background: $white;
+        padding-top: 30rem;
+        border-top-left-radius: 200%;
+        border-top-right-radius: 200%;
+        z-index: 3;
+    }
+    .big-title {
+        font-size: 18rem;
+    }
+    .green-circle {
+        width: 13rem;
+        height: 13rem;
+    }
+    .row {
+        @extend .typography;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width:$screen-lg-max) {
+    .about {
+        .big-title {
+            font-size: 12rem;
+        }
+        .green-circle {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+}
+
+@media only screen and (max-width:$screen-sm-max) {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .about {
+        padding-top: 4rem;
+        padding-bottom: 0;
+        &:before {
+            display: none;
+        }
+        .circle {
+            display: none;
+        }
+        .row {
+            text-align: center;
+            .big-title {
+                font-size: 7rem;
+            }
+        }
+    }
+}
