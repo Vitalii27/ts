@@ -2,26 +2,40 @@
 <section class="section jobs" id="jobs">
     <div class="container-fluid">
         <div class="row">
-            <!-- @@include('./big-title.html', { "text": "вакансии","span": "" }) -->
-            <!-- <span class='green-circle' data-parallax='{"scale":{"from":0.9,"to":1.1}, "y":{"from":"0%","to":"15%"}, "duration":"100vh"}'></span> -->
+            @@include('./big-title.html', { "text": "вакансии","span": "" })
+            <span class='green-circle' data-parallax='{"scale":{"from":0.9,"to":1.1}, "y":{"from":"0%","to":"15%"}, "duration":"100vh"}'></span>
             <div class="jobs_content">
+
+
                 <div class="jobs_filters">
-                    <div class="jobs_location">
+                    <!-- <div class="jobs_location">
                         <div data-filter="*" class="active-filter green-button">все</div>
                         <div data-filter=".office" class="green-button">офис</div>
                         <div data-filter=".stores" class="green-button">магазины</div>
 
-                    </div>
-                    <div class="jobs_cites">
+                    </div> -->
+                    <!-- <div class="jobs_cites">
                         <div data-filter="*" class="green-button active-filter">все</div>
                         <div data-filter=".kyiv" class="green-button">kyiv</div>
                         <div data-filter=".kharkiv" class="green-button">kharkiv</div>
                         <div data-filter=".dnepr" class="green-button">dnepr</div>
                         <div data-filter=".lvov" class="green-button">lvov</div>
-                    </div>
+                    </div> -->
+                    <ul id="filter-location">
+                        <li class="green-button active-button"><a href="#" class="all">все</a></li>
+                        <li class="green-button"><a href="#" class="office">офис</a></li>
+                        <li class="green-button"><a href="#" class="store">магазин</a></li>
+                    </ul>
+                    <ul id="filter-cites">
+                        <li class="green-button active-button"><a href="#" class="all">все</a></li>
+                        <li class="green-button"><a href="#" class="kyiv">kyiv</a></li>
+                        <li class="green-button"><a href="#" class="kharkiv">kharkiv</a></li>
+                        <li class="green-button"><a href="#" class="dnepr">dnepr</a></li>
+                        <li class="green-button"><a href="#" class="lvov">lvov</a></li>
+                    </ul>
                 </div>
                 <ul class="jobs_list">
-                    <li class="jobs_item kyiv office">
+                    <li class="item jobs_item kyiv office" data-id="id-1" data-type="kyiv" data-location="office">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>buying</h5>
@@ -87,7 +101,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="jobs_item kyiv">
+                    <li class="jobs_item kyiv" data-id="id-2" data-type="kyiv">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>buying</h5>
@@ -153,7 +167,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item kyiv stores">
+                    <li class="jobs_item kyiv stores" data-id="id-3" data-type="kyiv">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>MERCHANDISING</h5>
@@ -219,7 +233,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item kharkiv">
+                    <li class="jobs_item kharkiv" data-id="id-4" data-type="kharkiv">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>MARKETING & PR</h5>
@@ -285,7 +299,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item dnepr">
+                    <li class="jobs_item dnepr" data-id="id-5" data-type="dnepr">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>CREATIVE</h5>
@@ -351,7 +365,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item lvov">
+                    <li class="jobs_item lvov" data-id="id-6" data-type="lvov">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>FINANCE</h5>
@@ -417,7 +431,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="jobs_item dnepr">
+                    <li class="jobs_item dnepr" data-id="id-7" data-type="dnepr">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>HR</h5>
@@ -483,7 +497,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item kyiv">
+                    <li class="jobs_item kyiv" data-id="id-8" data-type="kyiv">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>finance</h5>
@@ -549,7 +563,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item kharkiv">
+                    <li class="jobs_item kharkiv" data-id="id-9" data-type="kharkiv">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>MARKETING & PR</h5>
@@ -615,7 +629,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item lvov">
+                    <li class="jobs_item lvov" data-id="id-10" data-type="lvov">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>CREATIVE</h5>
@@ -681,7 +695,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item kyiv">
+                    <li class="jobs_item kyiv" data-id="id-11" data-type="kyiv">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>MERCHANDISING</h5>
@@ -747,7 +761,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item kharkiv">
+                    <li class="jobs_item kharkiv" data-id="id-12" data-type="kharkiv">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>MARKETING & PR</h5>
@@ -813,7 +827,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item kyiv">
+                    <li class="jobs_item kyiv" data-id="id-13" data-type="kyiv">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>MERCHANDISING</h5>
@@ -879,7 +893,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item kharkiv">
+                    <li class="jobs_item kharkiv" data-id="id-14" data-type="kharkiv">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>MARKETING & PR</h5>
@@ -945,7 +959,7 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item kyiv">
+                    <li class="jobs_item kyiv" data-id="id-15" data-type="kyiv">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>buying</h5>
@@ -1011,21 +1025,21 @@
                             </div> -->
                         </div>
                     </li>
-                    <li class="jobs_item kyiv">
+                    <li class="jobs_item kyiv" data-id="id-16" data-type="kyiv">
                         <div class="jobs_wrap">
                             <div class="jobs_item-text">
                                 <h5>buying</h5>
                                 <p>kyiv</p>
                             </div>
                             <div class="jobs_item-img">
-                                <!-- <img src="assets/images/content/jobs-img1.png" alt="avatar">
+                                <img src="assets/images/content/jobs-img1.png" alt="avatar">
                                 <div class="jobs_arrow">
                                     <img src="assets/images/content/icon-arrow.png" alt="arrow">
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                         <div class="jobs_item-content">
-                            <!-- <div class="description">
+                            <div class="description">
                                 <div class="description_wrapper">
                                     <div class="description_content">
                                         <div class="description_title">
@@ -1074,7 +1088,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </li>
                 </ul>
