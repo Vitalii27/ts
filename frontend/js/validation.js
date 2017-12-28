@@ -40,14 +40,13 @@ if (typeof ajaxSubmit !== "function") {
             type: $form.attr('method'),
             data: $form.serialize(),
             success: function(data) {
-                //alert('Сообщение успешно отправленно!');
+                $.magnificPopup.close();
+                alertSucsess.showAlert('<i class="fa fa-info-circle" aria-hidden="true"></i> Ваше резюме отправлено');
                 $form[0].reset();
                 //showPopUp (data);
-
             },
             error: function(e) {
-                alert('Возникла ошибка, нет связи с сервером. Попробуйте еще раз.');
-                console.log(e);
+                alertError.showAlert('<i class="fa fa-info-circle" aria-hidden="true"></i> Ошибка');
             }
         });
     }

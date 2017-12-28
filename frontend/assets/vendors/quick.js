@@ -156,6 +156,7 @@ Github site: https://github.com/razorjack/quicksand
                                     // list, so make sure it is in the right location within $sourceParent
                                     // and put it in the list of elements we need to not delete.
                                     $keepElements = $keepElements.add($matchedElement);
+                                    $keepElements.css('display', 'block')
                                     if (i === 0) {
                                         $sourceParent.prepend($matchedElement);
                                     } else {
@@ -164,7 +165,8 @@ Github site: https://github.com/razorjack/quicksand
                                 }
                             });
                             // Remove whatever is remaining from the DOM
-                            $toDelete.not($keepElements).remove();
+                            $toDelete.not($keepElements).css('display', 'none');
+                            // $toDelete.not($keepElements).remove();
                         }
 
                         if (adjustHeightOnCallback) {
